@@ -10,5 +10,3 @@ services:
         value: production
       - key: PORT
         value: 10000
-    # Publish Directory is not needed for Node.js services
-    # Render will use the root directory (./)
