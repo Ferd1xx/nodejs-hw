@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: nodejs-hw
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    # Publish Directory is not needed for Node.js services
+    # Render will use the root directory (./)
