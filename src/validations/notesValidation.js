@@ -77,4 +77,3 @@ export const updateNoteSchema = {
       'object.min': 'Request body must contain at least one field (title, content, or tag) to update.',
     }),
 };
-
