@@ -17,8 +17,12 @@ const userSchema = new Schema(
       required: true,
       minlength: 8,
     },
+    avatar: {
+      type: String,
+      default: 'https://via.placeholder.com/150',
+    },
   },
-  { timestamps: true, versionKey: false,  }
+  { timestamps: true, versionKey: false },
 );
 
 userSchema.pre('save', function (next) {
@@ -35,4 +39,3 @@ userSchema.methods.toJSON = function () {
 };
 
 export const User = model('User', userSchema);
-
