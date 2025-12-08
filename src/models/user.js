@@ -19,10 +19,11 @@ const userSchema = new Schema(
     },
     avatar: {
       type: String,
-      default: 'https://via.placeholder.com/150',
+      required: false,
+      default: "<https://ac.goit.global/fullstack/react/default-avatar.jpg>",
     },
   },
-  { timestamps: true, versionKey: false },
+  { timestamps: true, versionKey: false,  }
 );
 
 userSchema.pre('save', function (next) {
